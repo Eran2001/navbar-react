@@ -18,7 +18,7 @@ const App = () => {
       <div className="logo">MyApp</div>
 
       {!isMobile && (
-        <div className="close-icon" onClick={toggleMobileMenu}>
+        <div className="burger-icon" onClick={toggleMobileMenu}>
           <FaAlignLeft />
         </div>
       )}
