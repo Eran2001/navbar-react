@@ -32,6 +32,10 @@
   display: none;
 }
 
+.close-icon {
+  display: none;
+}
+
 @media screen and (max-width: 680px) {
   .nav-links {
     display: none;
@@ -53,6 +57,16 @@
     display: block; 
     cursor: pointer;
     color: #FFF;
+    position: relative;
+  }
+
+  .close-icon {
+    display: block;
+    cursor: pointer;
+    color: #FFF;
+    position: absolute;
+    top: 2.5%;
+    left: 92.5%;
   }
 
   .nav-links li {

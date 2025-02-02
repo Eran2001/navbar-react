@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaAlignLeft } from "react-icons/fa";
+import { TfiClose } from "react-icons/tfi";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -8,13 +9,25 @@ const App = () => {
     setIsMobile(!isMobile);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobile(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo">MyApp</div>
 
-      <div className="burger-icon" onClick={toggleMobileMenu}>
-        <FaBars />
-      </div>
+      {!isMobile && (
+        <div className="close-icon" onClick={toggleMobileMenu}>
+          <FaAlignLeft />
+        </div>
+      )}
+
+      {isMobile && (
+        <div className="close-icon" onClick={closeMobileMenu}>
+          <TfiClose />
+        </div>
+      )}
 
       <ul className={`nav-links ${isMobile ? "active" : ""}`}>
         <li>
